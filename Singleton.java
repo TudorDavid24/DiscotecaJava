@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Singleton {
 
@@ -16,12 +18,12 @@ public class Singleton {
         return istanza;
     }
 
-    Queue<Persona> codaOffilne = new ArrayBlockingQueue<>(50);
-    Queue<Persona> codaOnline = new ArrayBlockingQueue<>(20);
-    Queue<Persona> codaGuardaroba = new ArrayBlockingQueue<>(10);
-    Queue<Persona> codaBar = new ArrayBlockingQueue<>(10);
-    Queue<Persona> codaBagno = new ArrayBlockingQueue<>(5);
-    Persona spazioDiscoteca[] = new Persona[400];
+    public Queue<Persona> codaOffilne = new ArrayBlockingQueue<>(50);
+    public Queue<Persona> codaOnline = new ArrayBlockingQueue<>(20);
+    public Queue<Persona> codaGuardaroba = new ArrayBlockingQueue<>(10);
+    public Queue<Persona> codaBar = new ArrayBlockingQueue<>(10);
+    public Queue<Persona> codaBagno = new ArrayBlockingQueue<>(5);
+    public CopyOnWriteArrayList<Persona> spazioDiscoteca = new CopyOnWriteArrayList<>();
 
 
 
